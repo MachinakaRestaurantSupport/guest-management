@@ -41,9 +41,7 @@ def create_app() -> FastAPI:
         )
 
     @application.exception_handler(BusinessValidationError)
-    async def handle_business_validation(
-        _: Request, exc: BusinessValidationError
-    ) -> JSONResponse:
+    async def handle_business_validation(_: Request, exc: BusinessValidationError) -> JSONResponse:
         return JSONResponse(
             status_code=status.HTTP_422_UNPROCESSABLE_CONTENT,
             content={"detail": str(exc)},
