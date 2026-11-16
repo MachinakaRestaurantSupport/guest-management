@@ -5,7 +5,7 @@
 
 ## 1. プロジェクト基盤
 
-- [ ] 1.1 `pyproject.toml`（`name="guest-management"`, pytest/ruff 設定）の追加
+- [x] 1.1 `pyproject.toml`（`name="guest-management"`, pytest/ruff 設定）の追加
 
 ## 2. アプリケーション実装
 
