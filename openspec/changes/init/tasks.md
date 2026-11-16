@@ -15,5 +15,5 @@
 
 ## 3. 検証・品質確認
 
-- [ ] 3.1 単体試験（`tests/test_guests_and_tables.py`）の作成と `pytest` 全パス確認
+- [x] 3.1 単体試験（`tests/test_guests_and_tables.py`）の作成と `pytest` 全パス確認
 - [ ] 3.2 `ruff check` / `ruff format` による品質確認
