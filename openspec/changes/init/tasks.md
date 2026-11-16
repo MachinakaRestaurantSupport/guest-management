@@ -11,7 +11,7 @@
 
 - [x] 2.1 ドメインモデル（`src/guest_management/__init__.py`, `models.py`）の実装 [GuestManagement_R01.DM01-01, GuestManagement_R01.DM01-04]
 - [x] 2.2 インメモリストア（`src/guest_management/store.py`）の実装 [GuestManagement_R01.DM01-01, GuestManagement_R01.DM01-02, GuestManagement_R01.DM01-03, GuestManagement_R01.DM01-04]
-- [ ] 2.3 FastAPI エンドポイント（`src/guest_management/main.py`）の実装 [GuestManagement_R01.DM01-01, GuestManagement_R01.DM01-02, GuestManagement_R01.DM01-03, GuestManagement_R01.DM01-04]
+- [x] 2.3 FastAPI エンドポイント（`src/guest_management/main.py`）の実装 [GuestManagement_R01.DM01-01, GuestManagement_R01.DM01-02, GuestManagement_R01.DM01-03, GuestManagement_R01.DM01-04]
 
 ## 3. 検証・品質確認
 
