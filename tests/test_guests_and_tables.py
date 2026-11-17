@@ -142,3 +142,15 @@ def test_guest_registration_and_points_adjustment() -> None:
 
     missing_resp = client.post("/guests/nonexistent/points", json={"delta": 10})
     assert missing_resp.status_code == 404
+
+
+def test_guest_ui_screens() -> None:
+    client = _client()
+    t1 = client.post("/tables", json={"table_number": "A-1", "capacity": 4}).json()
+    client.post(f"/tables/{t1['id']}/occupy", json={"party_size": 2})
+    client.post("/guests", json={"name": "佐藤花子", "email": "hanako@example.com"})
+
+    for path in ("/ui/tables", "/ui/checkin", "/ui/guests"):
+        res = client.get(path)
+        assert res.status_code == 200
+        assert "顧客・座席管理" in res.text

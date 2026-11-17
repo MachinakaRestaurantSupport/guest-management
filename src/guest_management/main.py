@@ -17,12 +17,14 @@ from guest_management.store import (
     InvalidStateTransitionError,
     NotFoundError,
 )
+from guest_management.ui import create_ui_router
 
 
 def create_app() -> FastAPI:
     """Create and configure the FastAPI application with an isolated in-memory store."""
     application = FastAPI(title="guest-management", version="0.1.0")
     store = InMemoryStore()
+    application.include_router(create_ui_router(store))
 
     @application.exception_handler(NotFoundError)
     async def handle_not_found(_: Request, exc: NotFoundError) -> JSONResponse:

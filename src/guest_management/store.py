@@ -109,6 +109,10 @@ class InMemoryStore:
         self._guests[guest.id] = guest
         return guest
 
+    def list_guests(self) -> list[Guest]:
+        """Return all registered guests."""
+        return list(self._guests.values())
+
     def adjust_guest_points(self, guest_id: str, delta: int) -> Guest:
         """Add or subtract points for a guest, rejecting negative balances."""
         guest = self._guests.get(guest_id)
